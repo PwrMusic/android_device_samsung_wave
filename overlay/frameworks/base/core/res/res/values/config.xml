@@ -32,6 +32,9 @@
     <!-- disable menu hard key on Crespo in non-pattern lockscreen -->
     <bool name="config_disableMenuKeyInLockScreen">true</bool>
 
+    <!-- Hide "Backlight" settings since not supported (we don't have buttons backlight) -->
+    <integer name="config_buttonBrightnessSettingDefault">0</integer>
+
     <integer name="config_deskDockKeepsScreenOn">0</integer>
     <integer name="config_carDockKeepsScreenOn">1</integer>
 
@@ -140,6 +143,13 @@
 
     <!--Boolean to enable stk functionality on Samsung phones-->
     <!-- <bool name="config_samsung_stk">true</bool> -->
+
+    <!-- Indicate whether the SD card is accessible without removing the battery. -->
+    <bool name="config_batterySdCardAccessibility">false</bool>
+
+    <!-- we need more performance for DB Management -->
+    <string name="db_default_sync_mode">OFF</string>
+    <string name="db_wal_sync_mode">OFF</string>
 	
     <!-- Hardware 'face' keys present on the device, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
@@ -158,5 +168,8 @@
     <bool name="config_enableTorch">true</bool>
 
     <!-- Disable lockscreen translucent decor by default -->
-    <bool name="config_enableLockScreenTranslucentDecor">true</bool>
+    <bool name="config_enableLockScreenTranslucentDecor">false</bool>
+
+    <!-- Disable translucent decor by default -->
+    <bool name="config_enableTranslucentDecor">false</bool>
 </resources>
