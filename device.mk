@@ -163,6 +163,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
        ro.sf.lcd_density=240 \
        ro.bq.gpu_to_cpu_unsupported=1 \
        ro.config.low_ram=true \
+       ro.ksm.default=1
 
 # SGX540 is slower with the scissor optimization enabled
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -189,10 +190,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Move Dalvik cache on /data partition
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dexopt-data-only=1
-
-# Disable JIT
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.jit.codecachesize=0
 
 # Set default USB interface and default to internal SD as /sdcard
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
