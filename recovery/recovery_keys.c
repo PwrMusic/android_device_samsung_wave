@@ -35,14 +35,12 @@ int device_handle_key(int key_code, int visible) {
             case KEY_MENU:
                 return SELECT_ITEM;
 				break;
-
+            case KEY_SLEEP:
+		return SELECT_ITEM;
+				break;
             case KEY_BACK:
                 return GO_BACK;
-                break;
-            case KEY_SLEEP:
-            default:
-                return NO_ACTION;
-				break;
+                		break;
         }
     }
 
