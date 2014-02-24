@@ -46,6 +46,7 @@ on fs
     mount ext4 loop@/mnt/bada_system/cache.img /cache noatime
     mount ext4 loop@/mnt/bada_app/data.img /data noatime
     mount_all fstab.wave
+    exec /system/xbin/busybox rm /system/bin/auditd
 
 # add zram parameters
     write /proc/sys/vm/page-cluster 0
