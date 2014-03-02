@@ -136,6 +136,9 @@ BOARD_USES_SKTEXTBOX := true
 # Hardware rendering
 USE_OPENGL_RENDERER := true
 
+# Minimal fonts
+SMALLER_FONT_FOOTPRINT := true
+
 # TARGET_DISABLE_TRIPLE_BUFFERING can be used to disable triple buffering
 # on per target basis. On crespo it is possible to do so in theory
 # to save memory, however, there are currently some limitations in the
