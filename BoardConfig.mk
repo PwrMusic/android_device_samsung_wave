@@ -103,9 +103,6 @@ WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_STA     := "/vendor/firmware/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_AP      := "/vendor/firmware/fw_bcmdhd_apsta.bin"
 
-# adb has root
-ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
-
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/wave/bluetooth 
 BOARD_BLUEDROID_VENDOR_CONF := device/samsung/wave/prebuilt/libbt_vndcfg.txt 
@@ -124,6 +121,7 @@ BOARD_USES_BML_OVER_MTD := true
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/wave/shbootimg.mk
 TARGET_RECOVERY_FSTAB := device/samsung/wave/fstab.wave
 RECOVERY_FSTAB_VERSION := 2
+BOARD_RECOVERY_SWIPE := true
 
 # Boot Animation
 TARGET_BOOTANIMATION_PRELOAD := true
@@ -138,6 +136,9 @@ USE_OPENGL_RENDERER := true
 
 # Minimal fonts
 SMALLER_FONT_FOOTPRINT := true
+
+# Disable CMUpdater to be build
+DISABLE_OTA := true
 
 # TARGET_DISABLE_TRIPLE_BUFFERING can be used to disable triple buffering
 # on per target basis. On crespo it is possible to do so in theory
