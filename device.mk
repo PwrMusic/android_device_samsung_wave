@@ -172,8 +172,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libmocha-ril.so \
 	ro.sf.lcd_density=240 \
 	ro.bq.gpu_to_cpu_unsupported=1 \
-	ro.config.low_ram=true \
-	ro.ksm.default=1
+	ro.config.low_ram=true
 
 # SGX540 is slower with the scissor optimization enabled
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -209,7 +208,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mass_storage \
 	persist.sys.vold.switchexternal=1
 
-include frameworks/native/build/phone-hdpi-512-dalvik-heap.mk
+# call dalvik heap config
+$(call inherit-product-if-exists, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
