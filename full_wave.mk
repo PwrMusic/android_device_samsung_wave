@@ -26,7 +26,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_small.mk)
 $(call inherit-product, device/samsung/wave/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 
-# Galaxy S uses high-density artwork where available
+# This device is hdpi.
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_LOCALES += hdpi
 
 # Discard inherited values and use our own instead.
