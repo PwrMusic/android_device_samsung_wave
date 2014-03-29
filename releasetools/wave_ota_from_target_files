@@ -485,6 +485,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
   
   script.ShowProgress(0.1, 10)
   script.UnpackPackageFile("zImage", "/bada_user/zImage")
+  script.UnpackPackageFile("zImage", "/sdcard/zImage")
 
   if OPTIONS.backuptool:
     script.ShowProgress(0.2, 10)
