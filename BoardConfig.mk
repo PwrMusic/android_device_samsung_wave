@@ -121,7 +121,6 @@ BOARD_USES_BML_OVER_MTD := true
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/wave/shbootimg.mk
 TARGET_RECOVERY_FSTAB := device/samsung/wave/fstab.wave
 RECOVERY_FSTAB_VERSION := 2
-BOARD_RECOVERY_SWIPE := true
 
 # Boot Animation
 TARGET_BOOTANIMATION_PRELOAD := true
@@ -156,20 +155,6 @@ COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
 # Screenrecord
 BOARD_SCREENRECORD_LANDSCAPE_ONLY := true
-
-# SELinux
-BOARD_SEPOLICY_DIRS += \
-    device/samsung/wave/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    bdaddr_read.te \
-    file_contexts \
-    orientationd.te \
-    property_contexts \
-    pvrsrvinit.te \
-    rild.te \
-    tvouthack.te \
-    tvoutserver.te \
 
 # Hardware tunables
 BOARD_HARDWARE_CLASS := device/samsung/wave/cmhw

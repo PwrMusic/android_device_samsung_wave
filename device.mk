@@ -199,7 +199,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Dalvik optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
-	dalvik.vm.debug.alloc=0 \
 	dalvik.vm.dexopt-data-only=1 \
 	dalvik.vm.dexopt-flags=v=a,o=v,m=y,u=y
 
