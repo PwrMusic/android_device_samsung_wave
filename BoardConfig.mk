@@ -33,7 +33,9 @@ BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_LIBSECRIL_STUB := true
 
 BOARD_NO_PAGE_FLIPPING := false
-BOARD_NO_32BPP := false
+
+# Test 16BPP Rendering
+BOARD_NO_32BPP := true 
 
 TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v7a
