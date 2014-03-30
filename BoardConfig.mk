@@ -17,7 +17,7 @@
 # Product-specific compile-time definitions.
 #
 
-#Video Devices
+# Video Devices
 BOARD_SECOND_CAMERA_DEVICE := /dev/video2
 
 # Kernel Config
@@ -31,11 +31,6 @@ BOARD_FM_DEVICE := si4709
 BOARD_USES_GENERIC_AUDIO := false
 
 BOARD_USES_LIBSECRIL_STUB := true
-
-BOARD_NO_PAGE_FLIPPING := false
-
-# Test 16BPP Rendering
-BOARD_NO_32BPP := true 
 
 TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v7a
@@ -86,9 +81,9 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_CMDLINE := console=ttyFIQ0,115200 init=/init no_console_suspend
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 7864320
-#350MB
+# 350MB
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 393216000
-#400MB
+# 400MB
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 419430400
 BOARD_FLASH_BLOCK_SIZE := 4096
 
@@ -119,7 +114,6 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/wave/recovery/graphics.c
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/wave/recovery/recovery_keys.c
-BOARD_USES_BML_OVER_MTD := true
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/wave/shbootimg.mk
 TARGET_RECOVERY_FSTAB := device/samsung/wave/fstab.wave
 RECOVERY_FSTAB_VERSION := 2
@@ -145,7 +139,6 @@ SMALLER_FONT_FOOTPRINT := true
 # would hurt performance significantly (see b/6016711)
 TARGET_DISABLE_TRIPLE_BUFFERING := false
 
-BOARD_ALLOW_EGL_HIBERNATION := false
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
@@ -163,4 +156,3 @@ BOARD_HARDWARE_CLASS := device/samsung/wave/cmhw
 
 # Include wave specific stuff
 -include device/samsung/wave/Android.mk
-
