@@ -172,6 +172,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libmocha-ril.so \
 	ro.sf.lcd_density=240 \
 	ro.bq.gpu_to_cpu_unsupported=1 \
+	persist.sys.prefer_16bpp=1 \
+	ro.opengles.surface.rgb565=true \
 	ro.config.low_ram=true
 
 # SGX540 is slower with the scissor optimization enabled
