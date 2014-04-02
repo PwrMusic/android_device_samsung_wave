@@ -170,10 +170,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	mobiledata.interfaces=pdp0,eth0,gprs,ppp0 \
 	ro.vold.switchablepair=/storage/sdcard0,/storage/sdcard1 \
 	rild.libpath=/system/lib/libmocha-ril.so \
-	ro.sf.lcd_density=240 \
+	ro.sf.lcd_density=240
+	
+# Graphic Performance Tweaks
+PRODUCT_PROPERTY_OVERRIDES += \
 	ro.bq.gpu_to_cpu_unsupported=1 \
-	persist.sys.prefer_16bpp=1 \
-	ro.opengles.surface.rgb565=true \
+	persist.sys.ui.hw=1 \
+	debug.sf.no_hw_vsync=1 \ 
+	ro.opengles.surface.rgb565=true
+	
+# Enable Low-Ram Configuration by default
+PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.low_ram=true
 
 # SGX540 is slower with the scissor optimization enabled
