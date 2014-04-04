@@ -159,7 +159,7 @@ PRODUCT_COPY_FILES += \
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
-PRODUCT_PROPERTY_OVERRIDES := \
+PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opengles.version=131072
 
 # These are the hardware-specific settings that are stored in system properties.
@@ -187,7 +187,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.hwui.disable_scissor_opt=true
 
-# enable Google-specific location features,
+# Enable Google-specific location features,
 # like NetworkLocationProvider and LocationCollector
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.com.google.locationfeatures=1 \
@@ -213,7 +213,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Set default USB interface and default to internal SD as /sdcard
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-	persist.sys.usb.config=mass_storage \
+	persist.sys.usb.config=mass_storage,adb \
 	persist.sys.vold.switchexternal=1
 
 # call dalvik heap config
