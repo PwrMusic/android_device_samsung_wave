@@ -172,26 +172,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libmocha-ril.so \
 	ro.sf.lcd_density=240
 	
-# Graphic Performance Tweaks
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.bq.gpu_to_cpu_unsupported=1 \
-	persist.sys.ui.hw=1 \
-	debug.sf.no_hw_vsync=1 \ 
-	ro.opengles.surface.rgb565=true
-	
 # Enable Low-Ram Configuration by default
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.low_ram=true
-
-# SGX540 is slower with the scissor optimization enabled
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.hwui.disable_scissor_opt=true
-
-# Enable Google-specific location features,
-# like NetworkLocationProvider and LocationCollector
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.com.google.locationfeatures=1 \
-	ro.com.google.networklocation=1
 
 # Extended JNI checks
 # The extended JNI checks will cause the system to run more slowly, but they can spot a variety of nasty bugs 

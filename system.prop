@@ -1,3 +1,19 @@
 #
-# system.prop for wave
+# system.prop for Wave
 #
+
+# Graphic Performance Tweaks
+ro.bq.gpu_to_cpu_unsupported=1
+persist.sys.ui.hw=1
+debug.sf.no_hw_vsync=1
+ro.opengles.surface.rgb565=true
+
+# SGX540 is slower with the scissor optimization enabled
+ro.hwui.disable_scissor_opt=true
+
+# Enable Google-specific location features,
+# like NetworkLocationProvider and LocationCollector
+ro.com.google.locationfeatures=1
+ro.com.google.networklocation=1
+
+
