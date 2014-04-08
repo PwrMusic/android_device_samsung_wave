@@ -15,5 +15,3 @@ ro.hwui.disable_scissor_opt=true
 # like NetworkLocationProvider and LocationCollector
 ro.com.google.locationfeatures=1
 ro.com.google.networklocation=1
-
-
