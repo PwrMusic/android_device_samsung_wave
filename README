@@ -1,0 +1,10 @@
+Copyright 2014 - The CyanogenMod Project - BadaDroid Team
+
+Device configuration for Samsung Wave (GT-S8500/GT-S8530)
+
+
+Known Bugs:
+
+- Can't power off device (you need to reboot to Bada or pull out the battery)
+- Battery Calibration needs some other work
+- Some SIM Cards could not be detected
