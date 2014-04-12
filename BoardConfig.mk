@@ -54,6 +54,9 @@ BOARD_MOBILEDATA_INTERFACE_NAME = "pdp0"
 # Kernel Source
 TARGET_KERNEL_SOURCE := kernel/samsung/wave
 
+# Use Linaro Toolchain for Kernel (2014.03)
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro/arm-cortex_a8-linux-gnueabi-linaro_4.8.3-2014.03/bin/arm-gnueabi-
+
 # Releasetools
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/samsung/wave/releasetools/wave_ota_from_target_files
 TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/samsung/wave/releasetools/wave_img_from_target_files
@@ -139,6 +142,7 @@ SMALLER_FONT_FOOTPRINT := true
 # would hurt performance significantly (see b/6016711)
 TARGET_DISABLE_TRIPLE_BUFFERING := false
 
+# Using Old EGL Stuff (older than Android 4.2)
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
