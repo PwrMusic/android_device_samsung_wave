@@ -55,7 +55,7 @@ BOARD_MOBILEDATA_INTERFACE_NAME = "pdp0"
 TARGET_KERNEL_SOURCE := kernel/samsung/wave
 
 # Use Linaro Toolchain for Kernel (2014.03)
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro/arm-cortex_a8-linux-gnueabi-linaro_4.8.3-2014.03/bin/arm-gnueabi-
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := ../../../device/samsung/wave/arm-cortex_a8-linux-gnueabi-linaro_4.8.3-2014.03
 
 # Releasetools
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/samsung/wave/releasetools/wave_ota_from_target_files
