@@ -38,13 +38,13 @@ on boot
 on fs
     mkdir /mnt/bada_system
     chmod 0777 /mnt/bada_system
-    mount vfat /dev/block/mmcblk0p1 /mnt/bada_system noatime
+    mount vfat /dev/block/mmcblk0p1 /mnt/bada_system noatime discard
     mkdir /mnt/bada_app
     chmod 0777 /mnt/bada_app
-    mount vfat /dev/block/mmcblk0p3 /mnt/bada_app noatime
-    mount ext4 loop@/mnt/bada_system/system.img /system noatime noauto_da_alloc discard journal_async_commit nodiratime data=writeback barrier=0 nobh nomblk_io_submit
-    mount ext4 loop@/mnt/bada_system/cache.img /cache noatime noauto_da_alloc discard journal_async_commit nodiratime data=writeback barrier=0 nobh nomblk_io_submit
-    mount ext4 loop@/mnt/bada_app/data.img /data noatime noauto_da_alloc discard journal_async_commit nodiratime data=writeback barrier=0 nobh nomblk_io_submit
+    mount vfat /dev/block/mmcblk0p3 /mnt/bada_app noatime discard
+    mount ext4 loop@/mnt/bada_system/system.img /system noatime noauto_da_alloc discard journal_async_commit discard nobarrier nodiratime data=writeback barrier=0 nobh nomblk_io_submit
+    mount ext4 loop@/mnt/bada_system/cache.img /cache noatime noauto_da_alloc discard journal_async_commit discard nobarrier nodiratime data=writeback barrier=0 nobh nomblk_io_submit
+    mount ext4 loop@/mnt/bada_app/data.img /data noatime noauto_da_alloc discard journal_async_commit discard nobarriernodiratime data=writeback barrier=0 nobh nomblk_io_submit
     mount_all fstab.wave
     exec /system/xbin/busybox rm /system/bin/auditd
 
