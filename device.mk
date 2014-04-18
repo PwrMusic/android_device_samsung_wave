@@ -202,6 +202,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mass_storage,adb \
 	persist.sys.vold.switchexternal=1
 
+# Recovery Options
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.cwm.forbid_format=/bada_system,/bada_user,/bada_app
+
 # call dalvik heap config
 $(call inherit-product-if-exists, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
