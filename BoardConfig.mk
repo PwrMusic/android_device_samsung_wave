@@ -140,7 +140,10 @@ SMALLER_FONT_FOOTPRINT := true
 TARGET_DISABLE_TRIPLE_BUFFERING := false
 
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
-TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
+
+# Testing sync framework
+# enabled in kernel
+#TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
 # hwcomposer: custom vsync ioctl
 BOARD_CUSTOM_VSYNC_IOCTL := true
