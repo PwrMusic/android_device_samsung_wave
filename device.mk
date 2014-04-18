@@ -85,8 +85,7 @@ PRODUCT_LOCALES := en_US
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
-	setup_fs \
-	bml_over_mtd
+	setup_fs
 
 # Usb accessory
 PRODUCT_PACKAGES += \
