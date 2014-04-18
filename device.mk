@@ -81,7 +81,8 @@ PRODUCT_PACKAGES := \
 	libmocha-ril
 
 # Only English Language
-PRODUCT_LOCALES := en_US
+PRODUCT_LOCALES := \
+	en_US
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
