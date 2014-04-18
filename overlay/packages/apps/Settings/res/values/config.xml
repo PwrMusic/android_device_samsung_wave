@@ -17,6 +17,9 @@
 
 <resources xmlns:xliff="urnasis:names:tc:xliff:document:1.2 ">
 
+    <string name="additional_system_update" translatable="false">com.s0up.goomanager</string>
+    <string name="additional_system_update_menu" translatable="false">com.s0up.goomanager.GooManagerActivity</string>
+
     <!-- Show Expanded Desktop preference -->
     <bool name="config_show_expandedDesktop">true</bool>
 

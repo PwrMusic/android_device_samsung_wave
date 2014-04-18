@@ -76,6 +76,10 @@ PRODUCT_COPY_FILES += \
 	device/samsung/wave/prebuilt/usr/keychars/sec_jack.kcm:system/usr/keychars/sec_jack.kcm \
 	device/samsung/wave/prebuilt/usr/keychars/gpio-keys.kcm:system/usr/keychars/gpio-keys.kcm
 
+# OTA Updater
+PRODUCT_COPY_FILES += \
+	device/samsung/wave/prebuilt/app/GooManager.apk:system/app/GooManager.apk
+
 # SHP Modem interfaces
 PRODUCT_PACKAGES := \
 	libmocha-ril

@@ -15,3 +15,8 @@ ro.hwui.disable_scissor_opt=true
 # like NetworkLocationProvider and LocationCollector
 ro.com.google.locationfeatures=1
 ro.com.google.networklocation=1
+
+# GooManager OTA Update
+ro.goo.developerid=Alberto96
+ro.goo.rom=WaveCM11
+ro.goo.version=1
