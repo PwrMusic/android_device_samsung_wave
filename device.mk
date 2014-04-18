@@ -80,10 +80,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES := \
 	libmocha-ril
 
-# Only English Language
-PRODUCT_LOCALES := \
-	en_US
-
 # Filesystem management tools
 PRODUCT_PACKAGES += \
 	setup_fs
