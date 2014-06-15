@@ -143,13 +143,13 @@ BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
 # Testing sync framework
 # enabled in kernel
-#TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
 # hwcomposer: custom vsync ioctl
 BOARD_CUSTOM_VSYNC_IOCTL := true
 
-# Required for TV out
-COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
+# Required for TV out & some enhancements
+COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS -DPVR_HARDWARE
 
 # Screenrecord
 BOARD_SCREENRECORD_LANDSCAPE_ONLY := true
