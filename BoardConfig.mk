@@ -131,6 +131,7 @@ USE_OPENGL_RENDERER := true
 
 # Minimal fonts
 SMALLER_FONT_FOOTPRINT := true
+MINIMAL_FONT_FOOTPRINT := true
 
 # TARGET_DISABLE_TRIPLE_BUFFERING can be used to disable triple buffering
 # on per target basis. On crespo it is possible to do so in theory
@@ -139,14 +140,15 @@ SMALLER_FONT_FOOTPRINT := true
 # would hurt performance significantly (see b/6016711)
 TARGET_DISABLE_TRIPLE_BUFFERING := false
 
+# GPU Properties
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
-
-# Testing sync framework
-# enabled in kernel
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
 # hwcomposer: custom vsync ioctl
 BOARD_CUSTOM_VSYNC_IOCTL := true
+
+# Browser
+ENABLE_WEBGL := true
 
 # Required for TV out & some enhancements
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS -DPVR_HARDWARE
