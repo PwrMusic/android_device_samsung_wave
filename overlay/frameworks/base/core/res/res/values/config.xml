@@ -26,9 +26,6 @@
     <!-- There is no charging LED. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
 
-    <!-- If this is true, the screen will fade off. -->
-    <bool name="config_animateScreenLights">true</bool>
-
     <!-- disable menu hard key on Crespo in non-pattern lockscreen -->
     <bool name="config_disableMenuKeyInLockScreen">true</bool>
 
@@ -174,8 +171,14 @@
     <!-- Device supports LED flashlight -->
     <bool name="config_enableTorch">true</bool>
 
+    <!-- Is the dreams feature supported? -->
+    <bool name="config_dreamsSupported">false</bool>
+
     <!-- If supported, are dreams enabled? (by default) -->
     <bool name="config_dreamsEnabledByDefault">false</bool>
+    
+    <!-- True will enable the screen-off animation. -->
+    <bool name="config_screenOffAnimation">false</bool>
 
     <!-- Disable lockscreen translucent decor by default -->
     <bool name="config_enableLockScreenTranslucentDecor">false</bool>
