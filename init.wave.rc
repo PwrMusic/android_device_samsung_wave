@@ -38,14 +38,16 @@ on boot
 on fs
     mkdir /mnt/bada_system
     chmod 0777 /mnt/bada_system
-    mount vfat /dev/block/mmcblk0p1 /mnt/bada_system noatime discard
+    mount vfat /dev/block/mmcblk0p1 /mnt/bada_system rw noatime errors=continue discard
     mkdir /mnt/bada_app
     chmod 0777 /mnt/bada_app
-    mount vfat /dev/block/mmcblk0p3 /mnt/bada_app noatime discard
-    mount ext4 loop@/mnt/bada_system/system.img /system noatime noauto_da_alloc discard journal_async_commit discard nobarrier nodiratime data=writeback barrier=0 nobh nomblk_io_submit
-    mount ext4 loop@/mnt/bada_system/cache.img /cache noatime noauto_da_alloc discard journal_async_commit discard nobarrier nodiratime data=writeback barrier=0 nobh nomblk_io_submit
-    mount ext4 loop@/mnt/bada_app/data.img /data noatime noauto_da_alloc discard journal_async_commit discard nobarriernodiratime data=writeback barrier=0 nobh nomblk_io_submit
+    mount vfat /dev/block/mmcblk0p3 /mnt/bada_app rw noatime errors=continue discard
+    mount ext4 loop@/mnt/bada_system/system.img /system rw noatime noauto_da_alloc discard journal_async_commit nobarrier nodiratime data=writeback barrier=0 nobh nomblk_io_submit errors=continue loop
+    mount ext4 loop@/mnt/bada_system/cache.img /cache rw noatime noauto_da_alloc discard journal_async_commit nobarrier nodiratime data=writeback barrier=0 nobh nomblk_io_submit errors=continue loop
+    mount ext4 loop@/mnt/bada_app/data.img /data rw noatime noauto_da_alloc discard journal_async_commit nobarrier nodiratime data=writeback barrier=0 nobh nomblk_io_submit errors=continue loop
     mount_all fstab.wave
+    
+# remove selinux stuff
     exec /system/xbin/busybox rm /system/bin/auditd
 
 # permissions for bluetooth.
