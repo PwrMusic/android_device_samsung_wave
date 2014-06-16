@@ -5,7 +5,6 @@
 # Graphic Performance Tweaks
 ro.bq.gpu_to_cpu_unsupported=1
 persist.sys.ui.hw=1
-debug.sf.no_hw_vsync=1
 ro.opengles.surface.rgb565=true
 
 # SGX540 is slower with the scissor optimization enabled
