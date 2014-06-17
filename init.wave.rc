@@ -42,9 +42,9 @@ on fs
     mkdir /mnt/bada_app
     chmod 0777 /mnt/bada_app
     mount vfat /dev/block/mmcblk0p3 /mnt/bada_app rw noatime errors=continue discard
-    mount ext4 loop@/mnt/bada_system/system.img /system rw noatime noauto_da_alloc discard journal_async_commit nobarrier nodiratime data=writeback barrier=0 nobh nomblk_io_submit errors=continue loop
-    mount ext4 loop@/mnt/bada_system/cache.img /cache rw noatime noauto_da_alloc discard journal_async_commit nobarrier nodiratime data=writeback barrier=0 nobh nomblk_io_submit errors=continue loop
-    mount ext4 loop@/mnt/bada_app/data.img /data rw noatime noauto_da_alloc discard journal_async_commit nobarrier nodiratime data=writeback barrier=0 nobh nomblk_io_submit errors=continue loop
+    mount ext4 loop@/mnt/bada_system/system.img /system rw noatime noauto_da_alloc discard journal_async_commit nobarrier nodiratime data=writeback barrier=0 nobh nomblk_io_submit errors=continue
+    mount ext4 loop@/mnt/bada_system/cache.img /cache rw noatime noauto_da_alloc discard journal_async_commit nobarrier nodiratime data=writeback barrier=0 nobh nomblk_io_submit errors=continue
+    mount ext4 loop@/mnt/bada_app/data.img /data rw noatime noauto_da_alloc discard journal_async_commit nobarrier nodiratime data=writeback barrier=0 nobh nomblk_io_submit errors=continue
     mount_all fstab.wave
     
 # remove selinux stuff
