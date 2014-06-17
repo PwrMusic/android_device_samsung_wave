@@ -35,12 +35,12 @@ public class DisplayColorCalibration {
         return Integer.MAX_VALUE;
     }
 
-    public static int getDefValue()  {
-        return getMaxValue();
-    }
-
     public static int getMinValue()  {
         return 0;
+    }
+
+    public static int getDefValue()  {
+        return Integer.MAX_VALUE;
     }
 
     public static String getCurColors()  {
