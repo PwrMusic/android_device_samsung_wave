@@ -18,4 +18,4 @@ ro.com.google.networklocation=1
 # GooManager OTA Update
 ro.goo.developerid=Alberto96
 ro.goo.rom=WaveCM11
-ro.goo.version=1
+ro.goo.version=2
