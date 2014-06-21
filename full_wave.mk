@@ -26,9 +26,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_small.mk)
 $(call inherit-product, device/samsung/wave/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 
-# This device is hdpi. Test mdpi on hdpi for lower footprint
-PRODUCT_AAPT_CONFIG := normal mdpi
-PRODUCT_AAPT_PREF_CONFIG := mdpi
+# This device is hdpi.
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_wave
